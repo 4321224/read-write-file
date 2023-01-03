@@ -14,3 +14,13 @@ fs.writeFile("text.txt", content, (err) => {
     return;
   }
 });
+
+fs.readFile("text.txt", "utf-8", (err, data) => {
+  if (err) throw err;
+  if (data.indexOf("mozilla") >= 0) {
+    console.log(data);
+  } else {
+    console.log("file not existing");
+  }
+});
+
